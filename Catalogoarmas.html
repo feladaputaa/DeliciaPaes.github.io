@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title> Catálogo armas</title>
-  <style>
-    
-  </style>
+    <title>Padaria Delícia</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+       nav {
+        width: 100%;
+        background-color: wheat;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        }
+
+      nav a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        margin-right: 20px;
+        }
+       .cardapio:hover {
+         position: relative;
+         top: 1px;
+         color: gray;
+       }
+       .pedido:hover {
+         position: relative;
+         top: 1px;
+         color: gray;
+       }
+       .local:hover {
+         position: relative;
+         top: 1px;
+        color: gray;
+       }
+      .logo {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+      }
+
+      .produto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        width: 200px;
+        height: 300px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+
+      .produto:hover {
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+      }
+
+      .produto img {
+        margin-top: 1px;
+        width: 200px;
+        height: 200px;
+      }
+
+      .produto h3 {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .produto p {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #666;
+      }
+    </style>
   </head>
   <body>
-    <h1>Teste</h1> 
+    <nav>
+      <div class="logo">
+        <p>Padaria Delicia</p>
+      </div>
+      <div>
+        <a class="cardapio" href="#">Cardápio</a>
+        <a class="pedido" href="#">Pedido Online</a>
+        <a class="local" href="#">Local de Atendimento</a>
+      </div>
+    </nav>
+    <h1>Bem-vindo à Padaria Delicia!</h1>
+    <p>...</p>
+    <div class="container">
+  <div class="produto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7l4yBlPGv2pKEewlBEN5UlxcVO-_aKmOmAA&usqp=CAU" alt="Pães">
+    <h3>Pães</h3>
+  </div>
+  <div class="produto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcvMFMgGK_xFErrJ7KFLuZf90v21CTOZsWbA&usqp=CAU" alt="Doces">
+      <h3>Doces</h3>
+  </div>
+      <div class="produto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWH7xEQJY7BmdrU_68GKVMVO_Z7pH20smKQ&usqp=CAU" alt="Salgados">
+      <h3>Salgados</h3>
+    </div>
+      <div class="produto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWil92pHN6oP_KdcNArTa1_uA6btBGb5lNRw&usqp=CAU" alt="Bolos">
+      <h3>Bolos</h3>
+  </div>
+</div>
+
   </body>
 </html>
