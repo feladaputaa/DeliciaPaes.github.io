@@ -2,14 +2,55 @@
 <html lang="pt-br">
 
 <head>
-  <title>Padaria Delícia</title>
+  <title>Padaria Delicia</title>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/x-icon"
-    href="https://thumbs.dreamstime.com/b/cartografia-engra%C3%A7ada-de-um-padeiro-segurando-p%C3%A3o-delicioso-168508488.jpg">
+    href="https://thumbs.dreamstime.com/b/cartografia-engra%C3%A7ada-de-um-padeiro-segurando-p%C3%A3o-delicioso-168508488.jpg" />
   <style>
     body {
       margin: 0;
       padding: 0;
+    }
+
+    .teste {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      background-color: rgb(104, 79, 64);
+      background-size: cover;
+      padding: 10px;
+    }
+
+    .teste a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .teste a:hover {
+      color: white;
+      transition: 0.5s ease-in-out;
+    }
+
+    .teste img {
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+    }
+
+    .maps {
+      display: inline-block;
+    }
+
+    .telefone {
+      display: flex;
+    }
+    .telefone a {
+      position: relative;
+      top: 5px;
+    }
+    .telefone img {
+      width: 25px;
+      height: 25px;
     }
 
     nav {
@@ -20,20 +61,23 @@
       align-items: center;
       padding: 10px;
     }
+
     nav a {
       text-decoration: none;
       font-weight: bold;
       color: black;
       margin-right: 50px;
     }
-    nav a:hover{
-      border: 1px solid white;
+
+    nav a:hover {
+      border: 1px solid black;
       border-radius: 15px;
       padding: 10px;
       background-color: white;
       transition: 2s ease-in-out;
     }
-    .cardapio:active { 
+
+    .cardapio:active {
       position: relative;
       top: 1px;
       color: gray;
@@ -112,7 +156,7 @@
     .produto:hover {
       box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
       transform: translateY(-5px);
-      background-color: gray;
+      background-color: rgb(109, 109, 109);
       transition: 2.5s ease-in-out;
     }
 
@@ -124,12 +168,25 @@
       border-radius: 15px;
     }
 
-    .produto a {
+    .produto h2 {
       margin-top: -275px;
       font-size: 20px;
       font-weight: bold;
       color: #333;
       text-decoration: none;
+    }
+
+    .produto a {
+      border: 1px solid black;
+      border-radius: 15px;
+      padding: 5px;
+      color: white;
+      background-color: black;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 250px;
+
     }
 
     .produto p {
@@ -141,6 +198,20 @@
 </head>
 
 <body>
+  <div class="teste">
+    <div class="maps">
+      <img src="T:\1A\1ads Geovany\Padaria\maps.png" />
+      <a
+        href="https://www.google.com/maps/place/ETEC+Prof%C2%B0+Basilides+de+Godoy/@-23.5208186,-46.7299752,17z/data=!3m1!4b1!4m6!3m5!1s0x94cef8c1d371ec31:0x671c9325c275132e!8m2!3d-23.5208186!4d-46.7277865!16s%2Fg%2F121tt059">R.
+        Guaipá, 678 - Vila Leopoldina, São Paulo - SP, 05089-000</a>
+    </div>
+    <div class="telefone">
+      <img src="T:\1A\1ads Geovany\Padaria\telefone.png" />
+      <a href="">(11)1234-5678</a>
+    </div>
+    <a href=""></a>
+    <a href=""></a>
+  </div>
   <nav>
     <div class="logo">
       <p>Padaria Delicia</p>
@@ -157,32 +228,35 @@
   <div class="atendimento">
     <h2> Atendemos em:</h2>
     <img
-      src="https://vejasp.abril.com.br/wp-content/uploads/2021/10/Zestzing-Padaria-Artesanal-2.jpg?quality=70&strip=info&w=1280&h=720&crop=1">
+      src="https://vejasp.abril.com.br/wp-content/uploads/2021/10/Zestzing-Padaria-Artesanal-2.jpg?quality=70&strip=info&w=1280&h=720&crop=1" />
   </div>
   <div class="container">
     <div class="produto">
       <img
         src="https://img.freepik.com/fotos-gratis/diferentes-tipos-de-pao-feitos-de-farinha-de-trigo_140725-5648.jpg?size=626&ext=jpg&ga=GA1.2.426747201.1680107961&semt=sph"
-        alt="Pães">
-      <a href="#">Pães</a>
+        alt="Pães" />
+      <h2>Pães</h2>
+      <a href="#">Ver Catálogo</a>
     </div>
     <div class="produto">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcvMFMgGK_xFErrJ7KFLuZf90v21CTOZsWbA&usqp=CAU"
-        alt="Doces">
-      <a href="#">Doces</a>
+        alt="Doces" />
+      <h2>Doces</h2>
+      <a href="#">Ver Catálogo</a>
     </div>
     <div class="produto">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWH7xEQJY7BmdrU_68GKVMVO_Z7pH20smKQ&usqp=CAU"
-        alt="Salgados">
-      <a href="#">Salgados</a>
+        alt="Salgados" />
+      <h2>Salgados</h2>
+      <a href="#">Ver Catálogo</a>
     </div>
     <div class="produto">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWil92pHN6oP_KdcNArTa1_uA6btBGb5lNRw&usqp=CAU"
-        alt="Bolos">
-      <a href="">Bolos</a>
+        alt="Bolos" />
+      <h2>Bolos</h2>
+      <a href="#">Ver Catálogo</a>
     </div>
   </div>
-
 </body>
 
 </html>
