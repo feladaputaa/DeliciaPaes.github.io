@@ -1,128 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <title>Padaria Delícia</title>
-    <meta charset="UTF-8" />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
 
-       nav {
-        width: 100%;
-        background-color: wheat;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        }
+<head>
+  <title>Padaria Delícia</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon"
+    href="https://thumbs.dreamstime.com/b/cartografia-engra%C3%A7ada-de-um-padeiro-segurando-p%C3%A3o-delicioso-168508488.jpg">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-      nav a {
-        text-decoration: none;
-        font-weight: bold;
-        color: black;
-        margin-right: 20px;
-        }
-       .cardapio:hover {
-         position: relative;
-         top: 1px;
-         color: gray;
-       }
-       .pedido:hover {
-         position: relative;
-         top: 1px;
-         color: gray;
-       }
-       .local:hover {
-         position: relative;
-         top: 1px;
-        color: gray;
-       }
-      .logo {
-        text-align: center;
-        font-size: 24px;
-        font-weight: bold;
-      }
+    nav {
+      width: 100%;
+      background-color: wheat;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+      margin-right: 50px;
+    }
+    nav a:hover{
+      border: 1px solid white;
+      border-radius: 15px;
+      padding: 10px;
+      background-color: white;
+      transition: 2s ease-in-out;
+    }
+    .cardapio:active { 
+      position: relative;
+      top: 1px;
+      color: gray;
+    }
 
-      .container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: 20px;
-      }
+    .pedido:active {
+      position: relative;
+      top: 1px;
+      color: gray;
+    }
 
-      .produto {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 20px;
-        width: 200px;
-        height: 300px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-      }
+    .local:active {
+      position: relative;
+      top: 1px;
+      color: gray;
+    }
 
-      .produto:hover {
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-        transform: translateY(-5px);
-      }
+    .logo {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-      .produto img {
-        margin-top: 1px;
-        width: 200px;
-        height: 200px;
-      }
+    .bemvindo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
 
-      .produto h3 {
-        margin-top: 20px;
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-      }
+    .atendimento {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
 
-      .produto p {
-        margin-top: 10px;
-        font-size: 16px;
-        color: #666;
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <p>Padaria Delicia</p>
-      </div>
-      <div>
-        <a class="cardapio" href="#">Cardápio</a>
-        <a class="pedido" href="#">Pedido Online</a>
-        <a class="local" href="#">Local de Atendimento</a>
-      </div>
-    </nav>
-    <h1>Bem-vindo à Padaria Delicia!</h1>
-    <p>...</p>
-    <div class="container">
-  <div class="produto">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7l4yBlPGv2pKEewlBEN5UlxcVO-_aKmOmAA&usqp=CAU" alt="Pães">
-    <h3>Pães</h3>
-  </div>
-  <div class="produto">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcvMFMgGK_xFErrJ7KFLuZf90v21CTOZsWbA&usqp=CAU" alt="Doces">
-      <h3>Doces</h3>
-  </div>
-      <div class="produto">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWH7xEQJY7BmdrU_68GKVMVO_Z7pH20smKQ&usqp=CAU" alt="Salgados">
-      <h3>Salgados</h3>
+    .atendimento img {
+      margin: 10px;
+      width: 960px;
+      height: 540px;
+      border: 4px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    .atendimento img:hover {
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+      transition: 2s ease-in-out;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 30px;
+    }
+
+    .produto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      width: 250px;
+      height: 350px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+
+    .produto:hover {
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+      background-color: gray;
+      transition: 2.5s ease-in-out;
+    }
+
+    .produto img {
+      cursor: grabbing;
+      margin-top: 80px;
+      width: 240px;
+      height: 225px;
+      border-radius: 15px;
+    }
+
+    .produto a {
+      margin-top: -275px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .produto p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <p>Padaria Delicia</p>
     </div>
-      <div class="produto">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWil92pHN6oP_KdcNArTa1_uA6btBGb5lNRw&usqp=CAU" alt="Bolos">
-      <h3>Bolos</h3>
+    <div>
+      <a class="cardapio" href="#">Cardápio</a>
+      <a class="pedido" href="#">Pedido Online</a>
+      <a class="local" href="#">Local de Atendimento</a>
+    </div>
+  </nav>
+  <div class="bemvindo">
+    <h1>Bem-vindo à Padaria Delicia!</h1>
   </div>
-</div>
+  <div class="atendimento">
+    <h2> Atendemos em:</h2>
+    <img
+      src="https://vejasp.abril.com.br/wp-content/uploads/2021/10/Zestzing-Padaria-Artesanal-2.jpg?quality=70&strip=info&w=1280&h=720&crop=1">
+  </div>
+  <div class="container">
+    <div class="produto">
+      <img
+        src="https://img.freepik.com/fotos-gratis/diferentes-tipos-de-pao-feitos-de-farinha-de-trigo_140725-5648.jpg?size=626&ext=jpg&ga=GA1.2.426747201.1680107961&semt=sph"
+        alt="Pães">
+      <a href="#">Pães</a>
+    </div>
+    <div class="produto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcvMFMgGK_xFErrJ7KFLuZf90v21CTOZsWbA&usqp=CAU"
+        alt="Doces">
+      <a href="#">Doces</a>
+    </div>
+    <div class="produto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWH7xEQJY7BmdrU_68GKVMVO_Z7pH20smKQ&usqp=CAU"
+        alt="Salgados">
+      <a href="#">Salgados</a>
+    </div>
+    <div class="produto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWil92pHN6oP_KdcNArTa1_uA6btBGb5lNRw&usqp=CAU"
+        alt="Bolos">
+      <a href="">Bolos</a>
+    </div>
+  </div>
 
-  </body>
+</body>
+
 </html>
