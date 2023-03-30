@@ -8,16 +8,17 @@
     href="https://thumbs.dreamstime.com/b/cartografia-engra%C3%A7ada-de-um-padeiro-segurando-p%C3%A3o-delicioso-168508488.jpg" />
   <style>
     body {
+      flex-wrap: wrap;
       margin: 0;
       padding: 0;
     }
 
     .teste {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
       background-color: rgb(104, 79, 64);
-      background-size: cover;
+      flex-wrap: nowrap;
       padding: 10px;
     }
 
@@ -52,53 +53,35 @@
       width: 25px;
       height: 25px;
     }
-
-    nav {
-      width: 100%;
-      background-color: wheat;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-weight: bold;
-      color: black;
-      margin-right: 50px;
-    }
-
-    nav a:hover {
-      border: 1px solid black;
-      border-radius: 15px;
-      padding: 10px;
-      background-color: white;
-      transition: 2s ease-in-out;
-    }
-
-    .cardapio:active {
-      position: relative;
-      top: 1px;
-      color: gray;
-    }
-
-    .pedido:active {
-      position: relative;
-      top: 1px;
-      color: gray;
-    }
-
-    .local:active {
-      position: relative;
-      top: 1px;
-      color: gray;
-    }
-
     .logo {
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
+      display: grid;
+      justify-content: flex-start;
+    }
+    .logosec {
+      margin: 0;
+      padding: 0;
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGqbTSDr7h0-2_AQVjNiKGZ8vqOiY2CC7otw&usqp=CAU");
+      background-size: cover;
+      width: 100%;
+      height: 600px;
+      opacity: 0.8;
+    }
+    .logo a {
+      text-decoration: none;
+      color: white;
+      text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+      font-weight: 100px;
+      padding: 80px;
+      position: relative;
+      right: 40px;
+    }
+    .logo a:hover {
+    border-top: 2px solid white;
+    transform: translate(20px);
+    border-bottom: 2px solid white;
+    transform: translate(-20px);
+    border-radius: 0px;
+    transition: all 0.8s ease-in-out;
     }
 
     .bemvindo {
@@ -106,6 +89,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      margin-top: 60px;
     }
 
     .atendimento {
@@ -128,7 +112,7 @@
     .atendimento img:hover {
       box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
       transform: translateY(-5px);
-      transition: 2s ease-in-out;
+      transition: 1.5s ease-in-out;
     }
 
     .container {
@@ -145,8 +129,8 @@
       flex-direction: column;
       align-items: center;
       margin: 20px;
-      width: 250px;
-      height: 350px;
+      width: 200px;
+      height: 200px;
       border: 1px solid #ddd;
       border-radius: 10px;
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -162,9 +146,8 @@
 
     .produto img {
       cursor: grabbing;
-      margin-top: 80px;
-      width: 240px;
-      height: 225px;
+      width: 200px;
+      height: 200px;
       border-radius: 15px;
     }
 
@@ -172,16 +155,13 @@
       margin-top: -275px;
       font-size: 20px;
       font-weight: bold;
+      font-style: italic;
       color: #333;
       text-decoration: none;
     }
 
     .produto a {
-      border: 1px solid black;
-      border-radius: 15px;
-      padding: 5px;
-      color: white;
-      background-color: black;
+      color: black;
       text-decoration: none;
       font-size: 18px;
       font-weight: bold;
@@ -193,6 +173,17 @@
       margin-top: 10px;
       font-size: 16px;
       color: #666;
+    }
+    .final {
+      display: grid;
+      justify-content: flex-start;
+      background-color: rgb(48, 56, 48);
+      position: relative;
+    }
+    .final h3 {
+      color:white;
+      font-size:18px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -209,19 +200,14 @@
       <img src="T:\1A\1ads Geovany\Padaria\telefone.png" />
       <a href="">(11)1234-5678</a>
     </div>
-    <a href=""></a>
-    <a href=""></a>
   </div>
-  <nav>
-    <div class="logo">
-      <p>Padaria Delicia</p>
-    </div>
-    <div>
+  <section class="logosec">
+     <div class="logo">
       <a class="cardapio" href="#">Cardápio</a>
       <a class="pedido" href="#">Pedido Online</a>
       <a class="local" href="#">Local de Atendimento</a>
     </div>
-  </nav>
+    </section>
   <div class="bemvindo">
     <h1>Bem-vindo à Padaria Delicia!</h1>
   </div>
@@ -256,6 +242,25 @@
       <h2>Bolos</h2>
       <a href="#">Ver Catálogo</a>
     </div>
+      <div class="produto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZpTQziuSnGaFh3UrDbyeYBJq0u_34wUDZfA&usqp=CAU"
+        alt="Bebidas" />
+      <h2>Bebidas</h2>
+      <a href="#">Ver Catálogo</a>
+    </div>
+    <div class="produto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThjT8e8d0V2cTIyTuPk6kTYYtCCDCr6kkopw&usqp=CAU"
+        alt="frutas" />
+      <h2>Frutas</h2>
+      <a href="#">Ver Catálogo</a>
+    </div>
+    </div>
+  <div class="final">
+    <h3>Institucional</h3>
+    <p>Quem Somos</p>
+    <p>Redes sociais</p>
+    <p>Número de telefone: (11)1234-5678</p>
+    <p>Endereço: R. Guaipá, 678 - Vila Leopoldina, São Paulo - SP, 05089-000</p>
   </div>
 </body>
 
