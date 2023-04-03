@@ -4,14 +4,43 @@
     <title>Padaria delicia - Pães</title>
     <meta charset="UTF-8"/>
     <style>
+    .internos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: wheat;
+    }
+    .lanchesint {
+      display: grid;
+    }
+    .bolosint {
+      display: grid;
+    }
+    .lanchesint p, .bolosint p {
+      text-align: center;
+    }
+    .internos a {
+      padding: 5px;
+      text-align: center;
+      border: 2px solid black;
+      border-radius: 5px;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      color: black;
+    }
+    .internos a:active {
+      position: relative;
+      top: 1px;
+    }
      .logo {
        display: grid;
        justify-content: center;
-       background-color: wheat;
+       background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJZc8pPtV_8khpyeLzoQ1NijELXH4XWJNJ_A&usqp=CAU");
+       margin-top: 25px;
        text-align: center;
        font-family: Arial, Sans-Serif;
        font-size: 30px;
-       color: gray;
+       color: black;
      }
      .logo img {
        padding-top: 20px;
@@ -49,13 +78,29 @@
        text-align: center;
        padding: 5px;
        border-bottom: 2px solid black;
+       text-transform: uppercase;
+       font-family: Arial, Sans-Serif;
+       font-style: italic;
      }
     </style>
     </head>
     <body>
+      <div class="internos">
+        <div class="lanchesint">
+          <p>Lanches</p>
+        <a href="#matinais">Lanches matinais</a>
+        <a href="#matinaisint">Lanches integrais matinais</a>
+        </div>
+        <div class="bolosint">
+          <p>Bolos</p>
+        <a href="#boloschoc">Bolos de chocolate</a>
+        <a href="#bolosbra">Bolos brancos</a>
+        <a href="#bolosesp">Bolos especiais</a>
+        </div>
+      </div>
       <div class="logo">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQslO3_bzq24sKwi1JO3CJTyTxUUKGk1Fo5Rw&usqp=CAU"/>
-        <p>Lanches matinais</p>
+        <p id="matinais">Lanches matinais</p>
         </div>
         <div class="containeritem">
         <div class="item">
@@ -101,7 +146,7 @@
       </div>
        <div class="logo">
          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtDkTHtyAgXkw6Fejdy4KhDeLUkG1G9W60CQ&usqp=CAU"/>
-         <p>Lanches integrais matinais</p>
+         <p id="matinaisint">Lanches integrais matinais</p>
        </div>
        <div class="containeritem">
        <div class="item">
@@ -144,6 +189,75 @@
          <p>Sanduíche de pão integral com abacate e frango grelhado</p>
          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1miWY6Zz9rOzteaUxgYalBXtHHp-IYtPHGg&usqp=CAU"/>
        </div>
+     </div>
+     <div class="logo">
+       <img src=""/>
+       <p id="boloschoc">Bolos de chocolate</p>
+     </div>
+     <div class="containeritem">
+       <div class="item">
+         <p>Bolo alpino</p>
+         </div>
+       <div class="item">
+         <p>Bolo brigadeiro</p>
+         </div>
+       <div class="item">
+         <p>Bolo avelã</p>
+         </div>
+       <div class="item">
+         <p>Bolo ferrero rocher</p>
+         </div>
+       <div class="item">
+         <p>Bolo prestígio</p>
+       </div>
+       <div class="item">
+         <p>Bolo sonho de valsa</p>
+       </div>
+     </div>
+          <div class="logo">
+       <img src=""/>
+       <p id="bolosbra">Bolos brancos</p>
+     </div>
+     <div class="containeritem">
+      <div class="item">
+       <p>Leite em pó</p>
+      </div>
+      <div class="item">
+        <p>Leite em pó</p>
+      </div>
+      <div class="item">
+        <p>Bolo oreo</p>
+      </div>
+      <div class="item">
+        <p>Brigadeiro branco</p>
+      </div>
+      <div class="item">
+        <p>Floresta branca</p>
+      </div>
+      <div class="item">
+        <p>Ouro Branco</p>
+      </div>
+     </div>
+          <div class="logo">
+       <img src=""/>
+       <p id="bolosesp">Bolos especiais</p>
+     </div>
+     <div class="containeritem">
+      <div class="item">
+        <p>Kit Kat</p>
+      </div>
+      <div class="item">
+        <p>Coração</p>
+      </div>
+      <div class="item">
+        <p>Enderman</p>
+      </div>
+      <div class="item">
+        <p>Star Wars</p>
+      </div>
+      <div class="item">
+        <p>Bolo Rafaello</p>
+      </div>
      </div>
     </body>
 </html>
