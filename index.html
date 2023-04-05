@@ -63,6 +63,7 @@
        background-color: white;
        width: 250px;
        height: 250px;
+       overflow: hidden;
        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
        margin: 20px;
        border: 1px solid black;
@@ -81,6 +82,33 @@
        text-transform: uppercase;
        font-family: Arial, Sans-Serif;
        font-style: italic;
+     }
+     .logonutri {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       background-color: black;
+       color: white;
+       text-transform: uppercase;
+       padding: 10px;
+     }
+     .nutri {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        row-gap: 5px;
+     }
+     .inutri {
+       text-align: center;
+       width: 200px;
+       height: 200px;
+       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+       background-color: wheat;
+       border: 2px solid black;
+       border-radius: 15px;
      }
     </style>
     </head>
@@ -104,28 +132,28 @@
         </div>
         <div class="containeritem">
         <div class="item">
-          <p>Pão com manteiga</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTltw4vFwM9lGwfZfGGoy6_jiyb4dksAQixCw&usqp=CAU"/>
+          <p>Burrito</p>
+          <img src="https://www.homeit.com.br/wp-content/uploads/2022/07/Receita-de-Burrito-de-Carne-1200x900.png"/>
         </div>
         <div class="item">
           <p>Pão com manteiga na chapa</p>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPVKw6vcdu8NVV-xUOUc6cjC2cyej2PDR-Qg&usqp=CAU"/>
         </div>
         <div class="item">
-          <p>Pão com margarina</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUyNrs0YUiRglbFW-g4rsAqOYa0vZpeXhYcg&usqp=CAU"/>
+          <p>Burrito de carne moida</p>
+          <img src="https://cdn.receitascluboficial.com.br/wp-content/uploads/2023/02/Burritos-de-carne-moida.webp"/>
         </div>
         <div class="item">
           <p>Pão com margarina na chapa</p>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN8ENDn5KV9RKf7FYKZ0uRS7oJ34IrS9AzIw&usqp=CAU"/>
         </div>
         <div class="item">
-          <p>Pão com requeijão</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFOMFLqsUbDOYRWV9e6kKSBnuevzfS2qPdg&usqp=CAU"/>
+          <p>Baguette com carne</p>
+          <img src="https://www.bemparana.com.br/wp-content/uploads/2022/08/blogpost_409719_img1_baguete-de-carne-com-farofa-de-pinhao-2.jpeg"/>
         </div>
         <div class="item">
-          <p>Pão com cream cheese</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDxjW93y6JxV-s1kAmhO5i315DFKSQQxjdaw&usqp=CAU"/>
+          <p>Sanduiche natural</p>
+          <img src="https://www.dicasdemulher.com.br/wp-content/uploads/2013/07/lanches-rapidos-saudaveis-dia-a-dia-8.jpg"/>
         </div>
         <div class="item">
           <p>Pão com manteiga + requeijão</p>
@@ -226,7 +254,7 @@
      </div>
      <div class="containeritem">
       <div class="item">
-       <p>Leite em pó</p>
+       <p>Bolo Leite em pó</p>
        <img src="https://bolosparavender.com.br/wp-content/uploads/2018/07/como-fazer-bolo-com-leite-em-p%C3%B3.jpg"/>
       </div>
       <div class="item">
@@ -271,6 +299,113 @@
         <p>Bolo Rafaello</p>
         <img src="https://i.ytimg.com/vi/nfBMwOkIorQ/maxresdefault.jpg"/>
       </div>
+     </div>
+     <div class="logonutri">
+       <h1 id="infonutri">Informações nutricionais:</h1>
+     </div>
+     <div id="nutri" class="nutri">
+       <div class="inutri">
+      <li>BURRITO:
+        <ul>
+          <li>Calorias: 300-600 calorias</li>
+          <li>Gordura: 10-30g</li>
+          <li>Carboidratos: 30-60g</li>
+          <li>Proteína: 15-30g</li>
+        </ul>
+      </li>
+      </div>
+      <div class="inutri">
+      <li>PÃO COM MANTEIGA NA CHAPA:
+        <ul>
+          <li>Calorias: 200-300 calorias</li>
+          <li>Gordura: 10-20g</li>
+          <li>Carboidratos: 20-40g</li>
+          <li>Proteína: 5-10g</li>
+        </ul>
+      </li>
+      </div>
+      <div class="inutri">
+      <li>BURRITO DE CARNE MOIDA:
+        <ul>
+          <li>Calorias: 500-700 calorias</li>
+          <li>Gordura: 20-30g</li>
+          <li>Carboidratos: 40-60g</li>
+          <li>Proteína: 25-35g</li>
+        </ul>
+      </li>
+      </div>
+      <div class="inutri">
+      <li>PÃO COM MARGARINA NA CHAPA:
+        <ul>
+          <li>Calorias: 200-300 calorias</li>
+          <li>Gordura: 10-20g</li>
+          <li>Carboidratos: 20-40g</li>
+          <li>Proteína: 5-10g</li>
+        </ul>
+      </li>
+      </div>
+      <div class="inutri">
+      <li>BAGUETTE COM CARNE:
+        <ul>
+          <li>Calorias: 400-600 calorias</li>
+          <li>Gordura: 10-20g</li>
+          <li>Carboidratos: 40-70g</li>
+          <li>Proteína: 15-30g</li>
+        </ul>
+      </li>
+      </div>
+      <div class="inutri">
+      <li>SANDUICHE NATURAL:
+        <ul>
+          <li>Calorias: 250-400 calorias</li>
+          <li>Gordura: 5-20g</li>
+          <li>Carboidratos: 30-50g</li>
+          <li>Proteína: 10-20g</li>
+        </ul>
+      </li>
+      </div>
+      <div class="inutri">
+      <li>PÃO COM MANTEIGA + REQUEIJÃO:
+        <ul>
+          <li>Calorias: 250-350 calorias</li>
+          <li>Gordura: 15-25g</li>
+          <li>Carboidratos: 20-40g</li>
+          <li>Proteína: 5-10g</li>
+        </ul>
+      </li>
+      </div>
+      <div class="inutri">
+      <li>PÃO COM NUTELLA:
+        <ul>
+          <li>Calorias: 300-500 calorias</li>
+          <li>Gordura: 15-25g</li>
+          <li>Carboidratos: 30-60g</li>
+          <li>Proteína: 5-10g</li>
+        </ul>
+      </li>
+      </div>
+      <div class="inutri">
+      <ul>
+        <li>PÃO COM OVO MEXIDO:
+          <ul>
+            <li>Calorias: 200-400 calorias</li>
+            <li>Gordura: 10-20g</li>
+            <li>Carboidratos: 20-30g</li>
+            <li>Proteína: 10-20g</li>
+          </ul>
+        </li>
+      </div>
+      <div class="inutri">
+        <li>PÃO COM OVO MEXIDO + BACON:
+          <ul>
+            <li>Calorias: 300-500 calorias</li>
+            <li>Gordura: 20-30g</li>
+            <li>Carboidratos: 20-30g</li>
+            <li>Proteína: 15-25g</li>
+          </ul>
+        </li>
+      </div>
+      </ul>
      </div>
     </body>
 </html>
