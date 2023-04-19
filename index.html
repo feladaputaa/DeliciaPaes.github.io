@@ -1,430 +1,118 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <title>Padaria delicia - Pães</title>
-    <meta charset="UTF-8"/>
-    <style>
-    .internos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      background-color: wheat;
-    }
-    
-    .lanchesint,
-    .bolosint {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    
-    .lanchesint p,
-    .bolosint p {
-      text-align: center;
-    }
-    
-    .internos a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px;
-      text-align: center;
-      border: none;
-      border-radius: 5px;
-      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      color: #fff;
-      background-color: #333;
-      transition: all 0.3s ease;
-    }
-       .internos a:hover {
-       transform: translateY(-5px);
-       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-     }
+<html>
+<head>
+	<title>Padaria delicia - Bolos</title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .internos a:active {
-      position: relative;
-      top: 1px;
-    }
-     .logo {
-       display: grid;
-       justify-content: center;
-       background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJZc8pPtV_8khpyeLzoQ1NijELXH4XWJNJ_A&usqp=CAU");
-       margin-top: 25px;
-       text-align: center;
-       font-family: Arial, Sans-Serif;
-       font-size: 30px;
-       color: black;
-     }
-     .logo img {
-       padding-top: 20px;
-       width: 670px;
-       height: 450px;
-     }
-     .logo p {
-       padding: 10px;
-       letter-spacing: 4px;
-       border-bottom: 2px dashed black;
-     }
-     .containeritem {
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       align-items: center;
-       justify-content: center;
-     }
-     .item {
-       background-color: white;
-       width: 250px;
-       height: 250px;
-       overflow: hidden;
-       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-       margin: 20px;
-       border: 1px solid black;
-       border-radius: 10px;
-       padding: 10px;
-     }
-     .item img {
-       width: 250px;
-       height: 175px;
-       border-radius: 15px;
-     }
-     .item p {
-       text-align: center;
-       padding: 5px;
-       border-bottom: 2px solid black;
-       text-transform: uppercase;
-       font-family: Arial, Sans-Serif;
-       font-style: italic;
-     }
-    .logonutri {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: black;
-      color: white;
-      text-transform: uppercase;
-      padding: 10px;
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+			color: #333;
+			padding: 20px;
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 20px;
+			color: #008080;
+		}
+
+		.produto {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			background-color: white;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+
+		.produto-imagem {
+      width: 150px;
+      height: 150px;
+      border: 1px solid black;
+      border-radius: 50%;
+      margin-right: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
     }
     
-    .nutri {
-      margin-top: 60px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      justify-content: center;
+    .produto-imagem img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
     }
+		.produto-imagem:hover {
+			transform: scale(1.2);
+			opacity: 0.8;
+		}
 
-    .inutri {
-      width: 200px;
-      height: 200px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-      background-color: wheat;
-      border: 2px solid black;
-      border-radius: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+		.produto-detalhes {
+			margin-right: 20px;
+			border-right: 1px solid #ddd;
+			padding-right: 20px;
+		}
 
-    </style>
-    </head>
-    <body>
-      <div class="internos">
-        <div class="lanchesint">
-          <p>Lanches</p>
-        <a href="#matinais">Lanches matinais</a>
-        <a href="#matinaisint">Lanches integrais matinais</a>
-        </div>
-        <div class="bolosint">
-          <p>Bolos</p>
-        <a href="#boloschoc">Bolos de chocolate</a>
-        <a href="#bolosbra">Bolos brancos</a>
-        <a href="#bolosesp">Bolos especiais</a>
-        </div>
-      </div>
-      <div class="logo">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQslO3_bzq24sKwi1JO3CJTyTxUUKGk1Fo5Rw&usqp=CAU"/>
-        <p id="matinais">Lanches matinais</p>
-        </div>
-        <div class="containeritem">
-        <div class="item">
-          <p>Burrito</p>
-          <img src="https://www.homeit.com.br/wp-content/uploads/2022/07/Receita-de-Burrito-de-Carne-1200x900.png"/>
-        </div>
-        <div class="item">
-          <p>Pão com manteiga na chapa</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPVKw6vcdu8NVV-xUOUc6cjC2cyej2PDR-Qg&usqp=CAU"/>
-        </div>
-        <div class="item">
-          <p>Burrito de carne moida</p>
-          <img src="https://cdn.receitascluboficial.com.br/wp-content/uploads/2023/02/Burritos-de-carne-moida.webp"/>
-        </div>
-        <div class="item">
-          <p>Pão com margarina na chapa</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN8ENDn5KV9RKf7FYKZ0uRS7oJ34IrS9AzIw&usqp=CAU"/>
-        </div>
-        <div class="item">
-          <p>Baguette com carne</p>
-          <img src="https://www.bemparana.com.br/wp-content/uploads/2022/08/blogpost_409719_img1_baguete-de-carne-com-farofa-de-pinhao-2.jpeg"/>
-        </div>
-        <div class="item">
-          <p>Sanduiche natural</p>
-          <img src="https://www.dicasdemulher.com.br/wp-content/uploads/2013/07/lanches-rapidos-saudaveis-dia-a-dia-8.jpg"/>
-        </div>
-        <div class="item">
-          <p>Pão com manteiga + requeijão</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaAzIRlZWWmXk6wV3fK8x84c0fkSxjMPMDOg&usqp=CAU"/>
-        </div>
-        <div class="item">
-          <p>Pão com Nutella</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTquKl_lyWGM_DnRGkM5mwJtZT6p_PNRHxN1w&usqp=CAU"/>
-        </div>
-        <div class="item">
-          <p>Pão com ovo mexido</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ZFdddAt_DjsqZoyHBaPIRJNpg8JqGrLKkg&usqp=CAU"/>
-        </div>
-        <div class="item">
-          <p>Pão com ovo mexido + bacon</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMsg9Sr05TTXzIdgnSd6ZzWdTDhohr_wvZSQ&usqp=CAU"/>
-        </div>
-      </div>
-       <div class="logo">
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtDkTHtyAgXkw6Fejdy4KhDeLUkG1G9W60CQ&usqp=CAU"/>
-         <p id="matinaisint">Lanches integrais matinais</p>
-       </div>
-       <div class="containeritem">
-       <div class="item">
-        <p>Sanduíche integral com atum e maionese</p>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxFhmr1ryDpsAwh1nm5cH9sHzTB0W9AQr9VA&usqp=CAU"/>
-       </div>
-       <div class="item">
-         <p>Bagel integral com cream cheese e salmão defumado</p>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOSJ-7DcAi3a8oKSmun81CJXLEUf0XkvnCbg&usqp=CAU"/>
-       </div>
-       <div class="item">
-         <p>Sanduíche integral com pasta de frango e abacate</p>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-SqV0JPvqeeV-Nd7J665NL_wErhV4nqciLw&usqp=CAU"/>
-       </div>
-       <div class="item">
-         <p>Pão integral tostado com abacate e ovo poché</p>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsoFq8VAEsvIpquYrOe3I72bj4KW_jJx_31Q&usqp=CAU"/>
-       </div>
-       <div class="item">
-         <p>Pão integral com queijo cottage, tomate e manjericão</p>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcRuewdt_fVtQMnRv57vKaGJIdALJjSt7zvA&usqp=CAU"/>
-       </div>
-       <div class="item">
-         <p>Baguete integral com presunto, queijo e tomate seco</p>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDB1MEH0_QYY8KHtn14d-K9wKkAUD_FRbEmw&usqp=CAU"/>
-       </div>
-       <div class="item">
-         <p>Pão sírio integral com falafel, alface e molho tahine</p>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdG8t8iS-cWXI8ianOW9uG4YcqZTfpBoRj4A&usqp=CAU"/>
-       </div>
-       <div class="item">
-         <p>Pão integral com manteiga</p>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPlivvtbiVGR8z9s7qi-a6PEVKvukfJTRx9w&usqp=CAU"/>
-       </div>
-       <div class="item">
-         <p>Pão francês integral com requeijão</p>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuo_9T9EDQLMDThgFEmy6ygtcQg1KZRFIhbQ&usqp=CAU"/>
-       </div>
-       <div class="item">
-         <p style="font-size: 14px;">Sanduíche integral com abacate e frango grelhado</p>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1miWY6Zz9rOzteaUxgYalBXtHHp-IYtPHGg&usqp=CAU"/>
-       </div>
-     </div>
-     <div class="logo">
-       <img src="https://cdn0.tudoreceitas.com/pt/posts/2/9/9/bolo_de_chocolate_cremoso_5992_orig.jpg"/>
-       <p id="boloschoc">Bolos de chocolate</p>
-     </div>
-     <div class="containeritem">
-       <div class="item">
-         <p>Bolo alpino</p>
-         <img src="https://www.nestleprofessional.com.br/sites/default/files/styles/np_recipe_detail/public/2022-06/bolo-alpino.png?itok=AwPMAu2A"/>
-         </div>
-       <div class="item">
-         <p>Bolo brigadeiro</p>
-         <img src="https://www.receitasnestle.com.br/sites/default/files/srh_recipes/6cf1bb7359f2dca08445c83ff58bf3bf.jpg"/>
-         </div>
-       <div class="item">
-         <p>Bolo avelã</p>
-         <img src="https://storage.googleapis.com/imagens_videos_gou_cooking_prod/production/cooking/3wapogQE7qJBaW48SFCwBU8yrqsAE7jATS2vzJg3.jpeg"/>
-         </div>
-       <div class="item">
-         <p>Bolo ferrero rocher</p>
-         <img src="https://www.carolcalazans.com.br/wp-content/uploads/2021/02/bolo-ferrero-2.jpg"/>
-         </div>
-       <div class="item">
-         <p>Bolo prestígio</p>
-         <img src="https://arcolor.com.br/wp-content/uploads/2017/08/bolo_prestigio.jpg"/>
-       </div>
-       <div class="item">
-         <p>Bolo sonho de valsa</p>
-         <img src="https://bolosparavender.com.br/wp-content/uploads/2020/02/bolo-de-sonho-de-valsa-cobertura-1200x900.jpg"/>
-       </div>
-     </div>
-          <div class="logo">
-       <img src="https://i.pinimg.com/originals/45/27/dd/4527dd2db5ea000f855a88c59368dec3.jpg"/>
-       <p id="bolosbra">Bolos brancos</p>
-     </div>
-     <div class="containeritem">
-      <div class="item">
-       <p>Bolo Leite em pó</p>
-       <img src="https://bolosparavender.com.br/wp-content/uploads/2018/07/como-fazer-bolo-com-leite-em-p%C3%B3.jpg"/>
-      </div>
-      <div class="item">
-        <p>Bolo oreo</p>
-        <img src="https://www.sabornamesa.com.br/media/k2/items/cache/5c27a90b3ac4e2635a4bb0e6d14f86ff_XL.jpg"/>
-      </div>
-      <div class="item">
-        <p>Brigadeiro branco</p>
-        <img src="https://doceriadoisamores.com.br/wp-content/uploads/sites/3/2020/10/Bolo-Brigadeiro-Branco.jpg"/>
-      </div>
-      <div class="item">
-        <p>Floresta branca</p>
-        <img src="https://zuleikadoces.com.br/wp-content/uploads/2015/01/b012.jpg"/>
-      </div>
-      <div class="item">
-        <p>Ouro Branco</p>
-        <img src="https://cooknenjoy.com/wp-content/uploads/2020/10/bolo-ouro-branco-02.jpg"/>
-      </div>
-     </div>
-          <div class="logo">
-       <img src="https://www.tuacasa.com.br/wp-content/uploads/2020/03/bolos-decorados-00.jpg"/>
-       <p id="bolosesp">Bolos especiais</p>
-     </div>
-     <div class="containeritem">
-      <div class="item">
-        <p>Kit Kat</p>
-        <img src="https://www.receitas-sem-fronteiras.com/uploads/media/bolo_kitkat_2.jpg?1392833584"/>
-      </div>
-      <div class="item">
-        <p>Coração</p>
-        <img src="https://bolosparavender.com.br/wp-content/uploads/2020/01/bolo-em-formato-de-cora%C3%A7%C3%A3o-amor-1200x900.jpg"/>
-      </div>
-      <div class="item">
-        <p>Bolo Torre</p>
-        <img src="https://ae01.alicdn.com/kf/HTB1DEQ9yxSYBuNjSsphq6zGvVXaU/Macarons-Torre-Bolo-de-Simula-o-de-simula-o-de-Decora-o-Da-Janela-Rainbow-Multicoloridos.jpg_Q90.jpg_.webp"/>
-      </div>
-      <div class="item">
-        <p>Bolo do hulk</p>
-        <img src="https://growroom.net/wp-content/uploads/2019/04/bolo-de-maconha-1.jpg"/>
-      </div>
-      <div class="item">
-        <p>Bolo Rafaello</p>
-        <img src="https://i.ytimg.com/vi/nfBMwOkIorQ/maxresdefault.jpg"/>
-      </div>
-     </div>
-     <div class="logonutri">
-       <h1 id="infonutri">Informações nutricionais:</h1>
-     </div>
-     <div id="nutri" class="nutri">
-       <div class="inutri">
-      <li>BURRITO:
-        <ul>
-          <li>Calorias: 300-600 calorias</li>
-          <li>Gordura: 10-30g</li>
-          <li>Carboidratos: 30-60g</li>
-          <li>Proteína: 15-30g</li>
-        </ul>
-      </li>
-      </div>
-      <div class="inutri">
-      <li>PÃO COM MANTEIGA NA CHAPA:
-        <ul>
-          <li>Calorias: 200-300 calorias</li>
-          <li>Gordura: 10-20g</li>
-          <li>Carboidratos: 20-40g</li>
-          <li>Proteína: 5-10g</li>
-        </ul>
-      </li>
-      </div>
-      <div class="inutri">
-      <li>BURRITO DE CARNE MOIDA:
-        <ul>
-          <li>Calorias: 500-700 calorias</li>
-          <li>Gordura: 20-30g</li>
-          <li>Carboidratos: 40-60g</li>
-          <li>Proteína: 25-35g</li>
-        </ul>
-      </li>
-      </div>
-      <div class="inutri">
-      <li>PÃO COM MARGARINA NA CHAPA:
-        <ul>
-          <li>Calorias: 200-300 calorias</li>
-          <li>Gordura: 10-20g</li>
-          <li>Carboidratos: 20-40g</li>
-          <li>Proteína: 5-10g</li>
-        </ul>
-      </li>
-      </div>
-      <div class="inutri">
-      <li>BAGUETTE COM CARNE:
-        <ul>
-          <li>Calorias: 400-600 calorias</li>
-          <li>Gordura: 10-20g</li>
-          <li>Carboidratos: 40-70g</li>
-          <li>Proteína: 15-30g</li>
-        </ul>
-      </li>
-      </div>
-      <div class="inutri">
-      <li>SANDUICHE NATURAL:
-        <ul>
-          <li>Calorias: 250-400 calorias</li>
-          <li>Gordura: 5-20g</li>
-          <li>Carboidratos: 30-50g</li>
-          <li>Proteína: 10-20g</li>
-        </ul>
-      </li>
-      </div>
-      <div class="inutri">
-      <li>PÃO COM MANTEIGA + REQUEIJÃO:
-        <ul>
-          <li>Calorias: 250-350 calorias</li>
-          <li>Gordura: 15-25g</li>
-          <li>Carboidratos: 20-40g</li>
-          <li>Proteína: 5-10g</li>
-        </ul>
-      </li>
-      </div>
-      <div class="inutri">
-      <li>PÃO COM NUTELLA:
-        <ul>
-          <li>Calorias: 300-500 calorias</li>
-          <li>Gordura: 15-25g</li>
-          <li>Carboidratos: 30-60g</li>
-          <li>Proteína: 5-10g</li>
-        </ul>
-      </li>
-      </div>
-      <div class="inutri">
-      <ul>
-        <li>PÃO COM OVO MEXIDO:
-          <ul>
-            <li>Calorias: 200-400 calorias</li>
-            <li>Gordura: 10-20g</li>
-            <li>Carboidratos: 20-30g</li>
-            <li>Proteína: 10-20g</li>
-          </ul>
-        </li>
-      </div>
-      <div class="inutri">
-        <li>PÃO COM OVO MEXIDO + BACON:
-          <ul>
-            <li>Calorias: 300-500 calorias</li>
-            <li>Gordura: 20-30g</li>
-            <li>Carboidratos: 20-30g</li>
-            <li>Proteína: 15-25g</li>
-          </ul>
-        </li>
-      </div>
-      </ul>
-     </div>
-    </body>
+		.produto-nome {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: #008080;
+		}
+
+		.produto-preco {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: #f00;
+		}
+
+		.produto-descricao {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+
+		.btn-peca-agora {
+			display: inline-block;
+			padding: 15px 30px;
+			background-color: white;
+			color: red;
+			border: 3px solid red;
+			border-radius: 5px;
+			transition: background-color 0.2s, color 0.2s;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+
+		.btn-peca-agora:hover {
+			background-color: red;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<h1>Produtos</h1>
+  <section>
+	<article class="produto">
+		<div class="produto-imagem">
+		  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDrJPHg27UjXyncV4Gdh22APBKIX_M78zmGA&usqp=CAU"/>
+		</div>
+		<div class="produto-detalhes">
+			<div class="produto-nome">Bolo de Chocolate</div>
+			<div class="produto-preco">R$ 29,90</div>
+			<div class="produto-descricao">Feito com uma massa à base de farinha de trigo, açúcar, ovos, manteiga/óleo, cacau em pó e fermento. </div>
+			<div class="btn-peca-agora">Peça agora</div>
+		</div>
+	</article>
+	</section>
+</body>
 </html>
